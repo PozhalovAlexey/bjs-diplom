@@ -27,9 +27,9 @@ class ApiConnector {
     const asyncPart = async () => {
       const body = JSON.stringify({ login, password });
 
-      const response = await fetch('/user/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       });
 
@@ -58,9 +58,9 @@ class ApiConnector {
     const asyncPart = async () => {
       const body = JSON.stringify({ login, password });
 
-      const response = await fetch('user/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("user/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -84,9 +84,9 @@ class ApiConnector {
    */
   static current(callback) {
     const asyncPart = async () => {
-      const response = await fetch('user/current', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("user/current", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
       });
       const result = await ApiConnector.parseResponseBody(response);
       return result;
@@ -109,9 +109,9 @@ class ApiConnector {
    */
   static logout(callback) {
     const asyncPart = async () => {
-      const response = await fetch('user/logout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("user/logout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
       });
       const result = await ApiConnector.parseResponseBody(response);
       return result;
@@ -134,9 +134,9 @@ class ApiConnector {
    */
   static getFavorites(callback) {
     const asyncPart = async () => {
-      const response = await fetch('favorites/', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("favorites/", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
       });
       const result = await ApiConnector.parseResponseBody(response);
       return result;
@@ -160,9 +160,9 @@ class ApiConnector {
    */
   static addUserToFavorites({ id, name }, callback) {
     const asyncPart = async () => {
-      const response = await fetch('favorites/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("favorites/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, name }),
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -187,9 +187,9 @@ class ApiConnector {
    */
   static removeUserFromFavorites(id, callback) {
     const asyncPart = async () => {
-      const response = await fetch('favorites/remove', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("favorites/remove", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -217,9 +217,9 @@ class ApiConnector {
     const asyncPart = async () => {
       const body = JSON.stringify({ to, currency, amount });
 
-      const response = await fetch('/money/transfer', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/money/transfer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -246,9 +246,9 @@ class ApiConnector {
     const asyncPart = async () => {
       const body = JSON.stringify({ currency, amount });
 
-      const response = await fetch('/money/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/money/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -275,9 +275,9 @@ class ApiConnector {
     const asyncPart = async () => {
       const body = JSON.stringify({ fromCurrency, targetCurrency, fromAmount });
 
-      const response = await fetch('/money/convert', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/money/convert", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       });
       const result = await ApiConnector.parseResponseBody(response);
@@ -301,8 +301,8 @@ class ApiConnector {
    */
   static getStocks(callback) {
     const asyncPart = async () => {
-      const response = await fetch('/stocks', {
-        method: 'GET',
+      const response = await fetch("/stocks", {
+        method: "GET",
       });
       const result = await ApiConnector.parseResponseBody(response);
       return result;

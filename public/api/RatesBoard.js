@@ -1,7 +1,6 @@
-
 class RatesBoard {
   constructor() {
-    this.tableBody = document.querySelector('table.table.rates tbody');
+    this.tableBody = document.querySelector("table.table.rates tbody");
   }
 
   fillTable(data) {
@@ -16,6 +15,6 @@ class RatesBoard {
   }
 
   clearTable() {
-    this.tableBody.innerHTML = '';
+    this.tableBody.innerHTML = "";
   }
 }
