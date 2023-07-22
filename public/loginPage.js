@@ -1,11 +1,5 @@
 "use strict";
 
-if (!UserForm) {
-  class UserForm {
-    constructor() {}
-  }
-}
-
 const newForm = new UserForm();
 
 newForm.loginFormCallback = function ({ login, password }) {
@@ -20,9 +14,6 @@ newForm.loginFormCallback = function ({ login, password }) {
         console.error(result.error);
       }
     },
-    (e) => {
-      console.log(e, "ZHOPA");
-    }
   );
 };
 
